@@ -1,4 +1,5 @@
 if(CONFIG_COMPONENT_MICROPYTHON_ENABLE)
+    add_compile_options(-Wno-error=dangling-pointer)
     set(mpy_component_name "micropython")
     get_filename_component(mpy_dir ${CMAKE_CURRENT_LIST_FILE} DIRECTORY)
     set(mpy_core_dir "${mpy_dir}/core")
@@ -17,6 +18,7 @@ if(CONFIG_COMPONENT_MICROPYTHON_ENABLE)
     set(lvgl_build_dir "${mpy_build_dir}/port/lvgl")
     set(lodepng_build_dir "${mpy_build_dir}/port/lodepng")
     set(components_requirements kendryte_sdk drivers boards utils spiffs)
+    
 
     ################# Add include #################
     list(APPEND ADD_INCLUDE "${mpy_core_dir}"
