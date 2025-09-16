@@ -37,7 +37,7 @@ jobs:
           sudo tar -Jxf kendryte-toolchain-ubuntu-amd64-8.2.0-20190409.tar.xz -C /opt
           rm -f kendryte-toolchain-ubuntu-amd64-8.2.0-20190409.tar.xz
           cd components/micropython/core
-          git checkout release/v1.16
+          git checkout release/v1.6
           cd ../../../tools/release
           chmod +x release.sh && ./release.sh
           time_now=$(date "+%Y_%m_%d_%H_%M_%S")
