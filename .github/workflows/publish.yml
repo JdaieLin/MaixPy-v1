@@ -36,7 +36,9 @@ jobs:
           wget https://github.com/kendryte/kendryte-gnu-toolchain/releases/download/v8.2.0-20190409/kendryte-toolchain-ubuntu-amd64-8.2.0-20190409.tar.xz
           sudo tar -Jxf kendryte-toolchain-ubuntu-amd64-8.2.0-20190409.tar.xz -C /opt
           rm -f kendryte-toolchain-ubuntu-amd64-8.2.0-20190409.tar.xz
-          cd tools/release
+          cd components/micropython/core
+          git checkout tags/v1.16
+          cd ../../../tools/release
           chmod +x release.sh && ./release.sh
           time_now=$(date "+%Y_%m_%d_%H_%M_%S")
           cd bin
