@@ -6,7 +6,8 @@
 	url = https://github.com/JdaieLin/kendryte-standalone-sdk.git
 [submodule "components/micropython/core"]
 	path = components/micropython/core
-	url = https://github.com/micropython/micropython.git
+	url = https://github.com/JdaieLin/micropython.git
+	branch = release/v1.16
 [submodule "components/micropython/port/src/lvgl/lv_bindings"]
 	path = components/micropython/port/src/lvgl/lv_bindings
 	url = https://github.com/littlevgl/lv_binding_micropython.git
